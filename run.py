@@ -106,6 +106,46 @@ def jalan(z):
         sys.stdout.write(e)
         sys.stdout.flush()
         time.sleep(0.01)
+#------------------[ MACHINE-SUPPORT ]---------------#
+def animation(u):
+	for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
+def alvino_xy(u):
+        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.005)
+def clear():
+	os.system('clear')
+def approval():
+  time.sleep(1)
+  uuid = str(os.geteuid())+"DAD"+str(os.geteuid())
+  id = "RXS-"+"".join(uuid)
+  os.system('clear')
+  print(logo)
+  animation("\033[1;37m [\u001b[36m𝜩\033[1;37m] YOU NEED APPROVAL TO USE THIS TOOL   \033[1;37m")
+  print("\033[1;37m [\u001b[36m𝜩\033[1;37m] YOUR KEY :\u001b[36m "+id);time.sleep(0.1)
+  print ("""\x1b[92m══════════════════════════════════════════════\x1b[97m""")
+  try:
+    httpCaht = requests.get("https://github.com/reyadz/PAID-RXS/blob/main/capturyr.txt").text
+    if id in httpCaht:
+      animation("\033[1;97m [\u001b[36m❯\033[1;37m] YOUR KEY HAS BEEN APPROVED !!!")
+      print(f"\x1b[92m══════════════════════════════════════════════\x1b[97m")
+      msg = str(os.geteuid())
+      time.sleep(1)
+      pass
+    else: 
+      animation("\x1b[1;97m [\u001b[36m❯\033[1;37m] SORRY YOUR KEY HAS NOT BEEN APPROVED ");
+      print(f"\x1b[92m══════════════════════════════════════════════\x1b[97m")
+      time.sleep(0.1)
+      animation("\033[1;37m [\u001b[36m1\033[1;37m] CONTACT ADMIN REYAD   \033[1;37m")
+      animation("\033[1;37m [\u001b[36m2\033[1;37m] CONTACT ADMIN TAHOSIN   \033[1;37m")
+      ok = input(' [\u001b[36m❯\033[1;37m] CHOOSE ADMIN TO CONTACT ')
+      if ok =='2':
+      	os.system('xdg-open https://wa.me/+8801989861704?text=Assalamuwalaikum%20Sir,%20I%20Want%20To%20Buy%20Your%20RXS%20Paid%20Tool.%20My%20Key:%20'+id)
+      if ok =='1':
+      	os.system('xdg-open https://www.facebook.com/reyadbross')
+      time.sleep(1)
+      approval()
+  except: 
+     exit() 
+approval()
 
 def rxs_gift():
     os.system('clear')
@@ -153,46 +193,7 @@ def dynamic(text):
         tahosin('\r'+text+o),
         sys.stdout.flush();time.sleep(1)
         
-#------------------[ MACHINE-SUPPORT ]---------------#
-def animation(u):
-	for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
-def alvino_xy(u):
-        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.005)
-def clear():
-	os.system('clear')
-def approval():
-  time.sleep(1)
-  uuid = str(os.geteuid())+"DAD"+str(os.geteuid())
-  id = "RXS-"+"".join(uuid)
-  os.system('clear')
-  print(logo)
-  animation("\033[1;37m [\u001b[36m𝜩\033[1;37m] YOU NEED APPROVAL TO USE THIS TOOL   \033[1;37m")
-  print("\033[1;37m [\u001b[36m𝜩\033[1;37m] YOUR KEY :\u001b[36m "+id);time.sleep(0.1)
-  print ("""\x1b[92m══════════════════════════════════════════════\x1b[97m""")
-  try:
-    httpCaht = requests.get("https://github.com/reyadz/PAID-RXS/blob/main/capturyr.txt").text
-    if id in httpCaht:
-      animation("\033[1;97m [\u001b[36m❯\033[1;37m] YOUR KEY HAS BEEN APPROVED !!!")
-      print(f"\x1b[92m══════════════════════════════════════════════\x1b[97m")
-      msg = str(os.geteuid())
-      time.sleep(1)
-      pass
-    else: 
-      animation("\x1b[1;97m [\u001b[36m❯\033[1;37m] SORRY YOUR KEY HAS NOT BEEN APPROVED ");
-      print(f"\x1b[92m══════════════════════════════════════════════\x1b[97m")
-      time.sleep(0.1)
-      animation("\033[1;37m [\u001b[36m1\033[1;37m] CONTACT ADMIN REYAD   \033[1;37m")
-      animation("\033[1;37m [\u001b[36m2\033[1;37m] CONTACT ADMIN TAHOSIN   \033[1;37m")
-      ok = input(' [\u001b[36m❯\033[1;37m] CHOOSE ADMIN TO CONTACT ')
-      if ok =='2':
-      	os.system('xdg-open https://wa.me/+8801989861704?text=Assalamuwalaikum%20Sir,%20I%20Want%20To%20Buy%20Your%20RXS%20Paid%20Tool.%20My%20Key:%20'+id)
-      if ok =='1':
-      	os.system('xdg-open https://www.facebook.com/reyadbross')
-      time.sleep(1)
-      approval()
-  except: 
-     exit() 
-approval()
+
 def main():
     user=[]
     twf =[]
