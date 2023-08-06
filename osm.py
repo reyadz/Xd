@@ -17,13 +17,14 @@ if os.system('command -v termux-setup-storage >/dev/null 2>&1') == 0:
     # ask for storage permission
     subprocess.run(['termux-setup-storage', '-y'], capture_output=True)
 else:
-    print('')
+    print('termux-setup-storage command not found')
+    exit()
 
 # check if storage permission was granted
 if os.path.isdir('/storage/emulated/0'):
-    print('')
+    print('Storage permission granted')
 else:
-    print('CANT RUN THIS TOOL WITHOUT STORAGE PERMISSION')
+    print('Storage permission not granted')
     exit()
 #------------------[ MACHINE-SUPPORT ]---------------#
 
