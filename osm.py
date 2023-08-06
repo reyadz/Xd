@@ -19,13 +19,14 @@ if os.system('command -v termux-setup-storage >/dev/null 2>&1') == 0:
 else:
     print('termux-setup-storage command not found')
     exit()
-
 # check if storage permission was granted
 if os.path.isdir('/storage/emulated/0'):
     print('Storage permission granted')
 else:
     print('Storage permission not granted')
     exit()
+except:
+	exit('Storage permission not granted')
 #------------------[ MACHINE-SUPPORT ]---------------#
 
 def animation(u):
